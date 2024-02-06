@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 
 
-class FiltersSerializer(serializers.Serializer):
+class FiltersSerializer(serializers.ModelSerializer):
 
 
     class Meta:

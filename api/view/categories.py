@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import ListView
+# from django.views.generic import ListView
 from rest_framework.decorators import api_view
+from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 
 from api.pagination import ResultsSetPagination
@@ -8,7 +9,7 @@ from categories.models import Categories
 from categories.serializers import CategoriesSerializer
 
 
-class CategoriesListViews(ListView):
+class CategoriesListViews(ListAPIView):
     serializer_class = CategoriesSerializer
     pogination_class = ResultsSetPagination
 

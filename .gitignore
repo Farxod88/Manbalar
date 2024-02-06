@@ -3,5 +3,5 @@ db.sqlite3
 migrations
 __pycache__
 .idea
-staticfiles
+static
 media

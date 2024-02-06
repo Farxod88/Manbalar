@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 
 
-class Filter_categoriesSerializer(serializers.Serializer):
+class Filter_categoriesSerializer(serializers.ModelSerializer):
 
 
 

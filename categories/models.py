@@ -15,10 +15,10 @@ class Categories(models.Model):
         return self.title
 
     def get_icon(self):
-            return self.iconca
+        return self.iconca
 
     def get_map(self):
-            return self.map
+        return self.map
 
     class Meta:
         verbose_name = 'Categories'

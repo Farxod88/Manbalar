@@ -3,7 +3,7 @@ from rest_framework import serializers
 from pages.models import Pages
 
 
-class PagesSerializer(serializers.Serializer):
+class PagesSerializer(serializers.ModelSerializer):
 
 
     class Meta:

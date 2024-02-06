@@ -2,6 +2,8 @@
 # from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.db.models import TextField
+
 from categories.models import Categories
 from filter_categories.models import Filter_cotegory
 from filters.models import Filters
@@ -85,7 +87,7 @@ class Sources(models.Model):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='sources', null=True, blank=True, verbose_name='Click to upload an image',
                             help_text='Click to upload an image', max_length=100, )
-    content = RichTextField()
+    content = TextField()
     statehood = models.BooleanField(default=False, verbose_name='Statehood', )
     # atributes = models.TextField()
     # contents = models.TextField()
@@ -134,7 +136,7 @@ class Contents(models.Model):
                                  help_text='Contents', max_length=100, )
     title = models.CharField(max_length=255,  verbose_name='Content title', help_text='Content title', )
     count = models.IntegerField(auto_created=True, default=1)
-    text = RichTextField(verbose_name='')
+    text = TextField(verbose_name='')
 
     def __str__(self):
         return self.title

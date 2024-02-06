@@ -3,7 +3,7 @@ from rest_framework import serializers
 from period_filter.models import Period_filter
 
 
-class Period_filterSerializer(serializers.Serializer):
+class Period_filterSerializer(serializers.ModelSerializer):
 
 
 

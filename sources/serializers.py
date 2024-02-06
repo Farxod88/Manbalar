@@ -3,7 +3,7 @@ from rest_framework import serializers
 from sources.models import Sources
 
 
-class SourcesSerializer(serializers.Serializer):
+class SourcesSerializer(serializers.ModelSerializer):
 
 
 

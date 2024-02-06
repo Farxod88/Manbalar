@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_adminlte.apps.AdminAdminlteConfig',
+    # 'admin_adminlte.apps.AdminAdminlteConfig',
     # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.static',
     'rest_framework',
+    'rest_framework_swagger',
+    'drf_yasg',
     'api',
     'articles',
     'categories',
@@ -155,6 +158,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [BASE_DIR / 'static', ]
 
 MEDIA_URL = '/media/'

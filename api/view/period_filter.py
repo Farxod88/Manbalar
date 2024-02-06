@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from rest_framework.decorators import api_view
+from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 
 from api.pagination import ResultsSetPagination
@@ -8,7 +9,7 @@ from period_filter.models import Period_filter
 from period_filter.serializers import Period_filterSerializer
 
 
-class Period_filterListViews(ListView):
+class Period_filterListViews(ListAPIView):
     serializer_class = Period_filterSerializer
     pogination_class = ResultsSetPagination
 

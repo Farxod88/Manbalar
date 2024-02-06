@@ -2,6 +2,9 @@
 # from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.db.models import TextField
+
+
 # from ckeditor.fields import RichTextField
 
 
@@ -9,7 +12,7 @@ from django.db import models
 
 class Articles(models.Model):
     title = models.CharField(max_length=120)
-    content = RichTextField(verbose_name='content')
+    content = TextField(verbose_name='content')
     file = models.FileField(upload_to='files/')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

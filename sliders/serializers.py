@@ -3,7 +3,7 @@ from rest_framework import serializers
 from sliders.models import Sliders
 
 
-class SlidersSerializer(serializers.Serializer):
+class SlidersSerializer(serializers.ModelSerializer):
 
 
     class Meta:
